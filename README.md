@@ -130,21 +130,21 @@ method/route combination to the appropriate view in the Flask application. The
 table below shows the HTTP request method and route we could use for this
 RESTful newsletter app:
 
-| HTTP Request Method | Route                            | Description                   |
-| ------------------- | -------------------------------- | ----------------------------- |
-| GET                 | `/api/v1.0/newsletters`          | Show all newsletters.         |
-| POST                | `/api/v1.0/newsletters`          | Create a new newsletter.      |
-| GET                 | `/api/v1.0/newsletters/<int:id>` | Show a specific newsletter.   |
-| PATCH or PUT        | `/api/v1.0/newsletters/<int:id>` | Update a specific newsletter. |
-| DELETE              | `/api/v1.0/newsletters/<int:id>` | Delete a specific newsletter. |
+| HTTP Request Method | Route                          | Description                   |
+| ------------------- | ------------------------------ | ----------------------------- |
+| GET                 | `/api/v1/newsletters`          | Show all newsletters.         |
+| POST                | `/api/v1/newsletters`          | Create a new newsletter.      |
+| GET                 | `/api/v1/newsletters/<int:id>` | Show a specific newsletter.   |
+| PATCH or PUT        | `/api/v1/newsletters/<int:id>` | Update a specific newsletter. |
+| DELETE              | `/api/v1/newsletters/<int:id>` | Delete a specific newsletter. |
 
 Two important things to note:
 
 - We follow the convention of prefacing each API route with the API version in
-  the form `/api/v{version}`. For example, we use `/api/v1.0` to denote version
+  the form `/api/v{version}`. For example, we use `/api/v1` to denote version
   1.0 of the API.
 - Even though there have five separate actions, we only have two routes defined
-  in API: `/api/v1.0/newsletters` and `/api/v1.0/newsletters/<int:id>`.
+  in API: `/api/v1/newsletters` and `/api/v1/newsletters/<int:id>`.
 
 Flask does a great job of integrating RESTful routes into its system. If you can
 understand routes in Flask, you can understand REST in general.
